@@ -9,16 +9,30 @@
 import UIKit
 import Alamofire
 import Fuzi
+import RxSwift
+import MJRefresh
 
 class PopularBooksVC: UITableViewController {
 
     private var books = [Book]()
 
     private var idx = -1
+    
+    private var mPage = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+            self.loadHTML(isRefresh: true)
+        })
+        
+        self.tableView.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: {
+            self.loadHTML(isRefresh: false)
+        })
+        
+        self.tableView.mj_header.beginRefreshing()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,20 +40,18 @@ class PopularBooksVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        loadHTML()
-    }
-
-    private func loadHTML() {
-        Alamofire.request("https://www.gitbook.com/explore?page=4").responseString { (response) in
-            guard response.result.error == nil else {
-                print(response.result.error?.localizedDescription ?? "error happens")
-                return
-            }
-            print("Response:\(String(describing: response.result.value))")
-            self.parseHTML(response.result.value!)
+    private func loadHTML(isRefresh:Bool) {
+        if isRefresh {
+            mPage = 0
+            books.removeAll()
+        }
+        _ = MyHttpClient().send(NetApi.getExplore(page: mPage)).subscribe { (x) in
+            let result = x.element!["result"]
+            self.mPage += 1
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
+            self.parseHTML(result as! String)
+            print("books cout:\(self.books.count)")
             self.tableView.reloadData()
         }
     }
@@ -68,10 +80,18 @@ class PopularBooksVC: UITableViewController {
 
         cell.book = books[indexPath.row]
 
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         idx = indexPath.row
+        performSegue(withIdentifier: "BookDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let bookDetailController = segue.destination as! BookDetailVC
+        bookDetailController.book = books[idx]
     }
 }

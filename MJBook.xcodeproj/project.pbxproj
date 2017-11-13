@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5315B97D20DD03739C7CAA54 /* Pods_MJBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569AD1E3C5431FC54816039A /* Pods_MJBook.framework */; };
+		9059B94D1FB8205B00927752 /* MyHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9059B94A1FB8205B00927752 /* MyHttpClient.swift */; };
+		9059B9511FB82DEA00927752 /* NetApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9059B9501FB82DE900927752 /* NetApi.swift */; };
+		9059B9531FB8EFF000927752 /* BookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9059B9521FB8EFF000927752 /* BookDetailVC.swift */; };
+		9059B9591FB9393200927752 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9059B9581FB9393200927752 /* WebVC.swift */; };
 		90E7C7E31FA056920093F29C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7C7E21FA056920093F29C /* AppDelegate.swift */; };
 		90E7C7E51FA056920093F29C /* PopularBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7C7E41FA056920093F29C /* PopularBooksVC.swift */; };
 		90E7C7E81FA056920093F29C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E7C7E61FA056920093F29C /* Main.storyboard */; };
@@ -15,7 +19,6 @@
 		90E7C7ED1FA056920093F29C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E7C7EC1FA056920093F29C /* Assets.xcassets */; };
 		90E7C7F01FA056920093F29C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E7C7EE1FA056920093F29C /* LaunchScreen.storyboard */; };
 		90E7C7FB1FA056920093F29C /* MJBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7C7FA1FA056920093F29C /* MJBookTests.swift */; };
-		90F0A3F41FB1C7600003B819 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0A3F31FB1C7600003B819 /* NetworkTools.swift */; };
 		A3A2199C338D6465CC47BC37 /* ParseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A21683F07536534C9D9811 /* ParseUtil.swift */; };
 		A3A21CA03CA72719183811B4 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A210167025B25A31A06266 /* BookCell.swift */; };
 		A3A21FFEC340C75A1239A47D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A2157FFE63971A043C5C0E /* Book.swift */; };
@@ -33,6 +36,10 @@
 
 /* Begin PBXFileReference section */
 		569AD1E3C5431FC54816039A /* Pods_MJBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MJBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9059B94A1FB8205B00927752 /* MyHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHttpClient.swift; sourceTree = "<group>"; };
+		9059B9501FB82DE900927752 /* NetApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetApi.swift; sourceTree = "<group>"; };
+		9059B9521FB8EFF000927752 /* BookDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailVC.swift; sourceTree = "<group>"; };
+		9059B9581FB9393200927752 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		90E7C7DF1FA056910093F29C /* MJBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E7C7E21FA056920093F29C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E7C7E41FA056920093F29C /* PopularBooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularBooksVC.swift; sourceTree = "<group>"; };
@@ -44,7 +51,6 @@
 		90E7C7F61FA056920093F29C /* MJBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E7C7FA1FA056920093F29C /* MJBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJBookTests.swift; sourceTree = "<group>"; };
 		90E7C7FC1FA056920093F29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90F0A3F31FB1C7600003B819 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		A3A210167025B25A31A06266 /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		A3A2157FFE63971A043C5C0E /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		A3A21683F07536534C9D9811 /* ParseUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUtil.swift; sourceTree = "<group>"; };
@@ -71,6 +77,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9059B9491FB8205B00927752 /* HttpUtil */ = {
+			isa = PBXGroup;
+			children = (
+				9059B9501FB82DE900927752 /* NetApi.swift */,
+				9059B94A1FB8205B00927752 /* MyHttpClient.swift */,
+			);
+			path = HttpUtil;
+			sourceTree = "<group>";
+		};
+		9059B9541FB8EFF900927752 /* bean */ = {
+			isa = PBXGroup;
+			children = (
+				A3A2157FFE63971A043C5C0E /* Book.swift */,
+			);
+			path = bean;
+			sourceTree = "<group>";
+		};
+		9059B9551FB8F00700927752 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				A3A210167025B25A31A06266 /* BookCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		9059B9561FB8F01600927752 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				A3A21683F07536534C9D9811 /* ParseUtil.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		9059B9571FB8F02600927752 /* page */ = {
+			isa = PBXGroup;
+			children = (
+				9059B9521FB8EFF000927752 /* BookDetailVC.swift */,
+				90E7C7E41FA056920093F29C /* PopularBooksVC.swift */,
+				9059B9581FB9393200927752 /* WebVC.swift */,
+			);
+			path = page;
+			sourceTree = "<group>";
+		};
 		90E7C7D61FA056910093F29C = {
 			isa = PBXGroup;
 			children = (
@@ -94,17 +143,17 @@
 		90E7C7E11FA056910093F29C /* MJBook */ = {
 			isa = PBXGroup;
 			children = (
+				9059B9571FB8F02600927752 /* page */,
+				9059B9561FB8F01600927752 /* util */,
+				9059B9551FB8F00700927752 /* cell */,
+				9059B9541FB8EFF900927752 /* bean */,
+				9059B9491FB8205B00927752 /* HttpUtil */,
 				90E7C7E21FA056920093F29C /* AppDelegate.swift */,
-				90E7C7E41FA056920093F29C /* PopularBooksVC.swift */,
 				90E7C7E61FA056920093F29C /* Main.storyboard */,
 				90E7C7EC1FA056920093F29C /* Assets.xcassets */,
 				90E7C7EE1FA056920093F29C /* LaunchScreen.storyboard */,
 				90E7C7F11FA056920093F29C /* Info.plist */,
 				90E7C7E91FA056920093F29C /* MJBook.xcdatamodeld */,
-				A3A21683F07536534C9D9811 /* ParseUtil.swift */,
-				A3A2157FFE63971A043C5C0E /* Book.swift */,
-				A3A210167025B25A31A06266 /* BookCell.swift */,
-				90F0A3F31FB1C7600003B819 /* NetworkTools.swift */,
 			);
 			path = MJBook;
 			sourceTree = "<group>";
@@ -261,11 +310,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MJBook/Pods-MJBook-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -297,11 +354,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90F0A3F41FB1C7600003B819 /* NetworkTools.swift in Sources */,
+				9059B9511FB82DEA00927752 /* NetApi.swift in Sources */,
 				90E7C7E51FA056920093F29C /* PopularBooksVC.swift in Sources */,
+				9059B94D1FB8205B00927752 /* MyHttpClient.swift in Sources */,
 				90E7C7EB1FA056920093F29C /* MJBook.xcdatamodeld in Sources */,
+				9059B9531FB8EFF000927752 /* BookDetailVC.swift in Sources */,
 				90E7C7E31FA056920093F29C /* AppDelegate.swift in Sources */,
 				A3A2199C338D6465CC47BC37 /* ParseUtil.swift in Sources */,
+				9059B9591FB9393200927752 /* WebVC.swift in Sources */,
 				A3A21FFEC340C75A1239A47D /* Book.swift in Sources */,
 				A3A21CA03CA72719183811B4 /* BookCell.swift in Sources */,
 			);

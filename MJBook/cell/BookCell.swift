@@ -26,7 +26,13 @@ class BookCell:UITableViewCell{
         
         if let book = self.book {
             self.titleLabel.text = book.title
-            self.summaryLabel.text = book.summary
+            if (!book.summary.isEmpty){
+                self.summaryLabel.text = book.summary
+                self.summaryLabel.isHidden = false
+            }else{
+                self.summaryLabel.isHidden = true
+            }
+            
             self.starCountLabel.text = "★  \(book.starCount)"
         }
     }
